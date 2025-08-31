@@ -62,16 +62,16 @@ can do.
 In order to develop locally you should be able to run `./tools.sh full-test` and have all checks pass. For this, a few requirements should be met:
 
 1. Ensure that you have python 3.8 installed locally
-1. Install OS dependencies for building various python package dependencies:
+2. Install OS dependencies for building various python package dependencies:
    - On an arch linux system (with pacman): `./tools.sh arch-install`
    - On a debian-based linux system (with apt): `./tools.sh deb-install` (Note on newer Ubuntu installations
      you may need to install `libsecp256k1-dev` if the secp256k1 python package fails to build)
    - On a Mac (with brew): `./tools.sh mac-install`
-1. Install the python requirements: `./tools.sh pip-install`
+3. Install the python requirements: `./tools.sh pip-install`
    (Note this will install the python packages to the current user's site-packages.
    For a python venv, follow the steps below)
-1. [Helm](https://helm.sh/) is required to be installed for linting the helm chart.
-1. [yq](https://github.com/mikefarah/yq) is required to be installed for building the docs, as it parses the helm chart's version to update the docs dynamically.
+4. [Helm](https://helm.sh/) is required to be installed for linting the helm chart.
+5. [yq](https://github.com/mikefarah/yq) is required to be installed for building the docs, as it parses the helm chart's version to update the docs dynamically.
 
 ### Using a Python Virtual Environment
 
@@ -82,10 +82,10 @@ to be separated from the rest of the (potentially conflicting) packages from the
 In order to do this, instead of step 3 above, perform the following steps:
 
 1. Ensure you have python venv installed, and run `python3.8 -m venv .venv`
-1. Activate the virtual environment in your shell by running `source .venv/bin/activate`
-1. Upgrade the setup dependencies for the virtual environment: `pip install -U pip setuptools`
-1. Install the core dependencies: `pip install -r requirements.txt`
-1. Install the dev dependencies: `pip install -U -r dev_requirements.txt`
+2. Activate the virtual environment in your shell by running `source .venv/bin/activate`
+3. Upgrade the setup dependencies for the virtual environment: `pip install -U pip setuptools`
+4. Install the core dependencies: `pip install -r requirements.txt`
+5. Install the dev dependencies: `pip install -U -r dev_requirements.txt`
 
 ### Other Information
 
